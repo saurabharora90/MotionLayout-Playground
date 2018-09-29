@@ -20,6 +20,8 @@ class ConstraintStateRobinhood : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_robinhood)
 
+        supportActionBar?.let { it.elevation = 0f }
+
         root.loadLayoutDescription(R.xml.robinhood_constraint_state)
 
         fab.setOnClickListener { root.setState(R.id.end, 0, 0) }
