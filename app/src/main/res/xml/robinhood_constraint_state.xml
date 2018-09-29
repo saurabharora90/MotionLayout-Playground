@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ConstraintLayoutStates xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <State
+        android:id="@+id/start"
+        app:constraints="@layout/activity_robinhood"/>
+
+    <State
+        android:id="@+id/end"
+        app:constraints="@layout/activity_robinhood_end"/>
+
+</ConstraintLayoutStates>
