@@ -21,6 +21,13 @@
                 android:alpha="0"
                 app:framePosition="0"
                 app:target="@+id/tvLorem" />
+            <KeyAttribute
+                app:framePosition="0"
+                app:target="@+id/ivInfo">
+                <CustomAttribute app:attributeName="Tint"
+                    app:customColorValue="#FFFFFF"/>
+            </KeyAttribute>
+
 
             <KeyAttribute
                 android:alpha="1"
@@ -30,6 +37,12 @@
                 android:alpha="1"
                 app:framePosition="100"
                 app:target="@+id/tvLorem" />
+            <KeyAttribute
+                app:framePosition="100"
+                app:target="@+id/ivInfo">
+                <CustomAttribute app:attributeName="Tint"
+                    app:customColorValue="#0000FF"/>
+            </KeyAttribute>
         </KeyFrameSet>
 
     </Transition>
@@ -56,6 +69,15 @@
             app:layout_constraintTop_toTopOf="@id/ivInfo"
             app:srcCompat="@android:drawable/arrow_up_float" />
 
+        <Constraint
+            android:id="@+id/ivInfo"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="@id/ivDusk"
+            app:layout_constraintEnd_toEndOf="@id/ivDusk"/>
+
     </ConstraintSet>
 
     <ConstraintSet android:id="@+id/end">
@@ -72,11 +94,22 @@
             android:id="@+id/ivArrow"
             android:layout_width="24dp"
             android:layout_height="24dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="16dp"
             android:rotation="180"
-            app:layout_constraintBottom_toTopOf="@id/ivInfo"
-            app:layout_constraintEnd_toEndOf="@id/ivInfo"
-            app:layout_constraintStart_toStartOf="@id/ivInfo"
+            app:layout_constraintBottom_toBottomOf="@id/ivDusk"
+            app:layout_constraintEnd_toEndOf="@id/ivDusk"
             app:srcCompat="@android:drawable/arrow_up_float" />
+
+        <Constraint
+            android:id="@+id/ivInfo"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:layout_constraintStart_toStartOf="@id/ivDusk"
+            app:layout_constraintBottom_toBottomOf="@id/ivDusk"
+            app:layout_constraintTop_toBottomOf="@id/ivDusk"
+            app:layout_constraintEnd_toEndOf="@id/ivDusk"
+            app:srcCompat="@android:drawable/ic_menu_info_details"/>
     </ConstraintSet>
 
 </MotionScene>
