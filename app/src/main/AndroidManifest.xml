@@ -25,7 +25,8 @@
         <activity android:name=".TwoViewsMotionActivity" />
         <activity android:name=".AttributeActivity" />
         <activity android:name=".GoogleIOExampleActivity" />
-        <activity android:name=".CustomDrivenActivity" />
+        <activity android:name=".CustomDrivenActivity"
+            android:theme="@style/CustomDrivenTheme"/>
     </application>
 
 </manifest>
