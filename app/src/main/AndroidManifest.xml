@@ -22,6 +22,7 @@
             android:label="Robinhood copy"/>
         <activity android:name=".KeyFrameActivity"/>
         <activity android:name=".BasicMotionActivity" />
+        <activity android:name=".TwoViewsMotionActivity" />
     </application>
 
 </manifest>
