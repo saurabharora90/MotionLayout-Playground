@@ -12,7 +12,25 @@
             app:touchAnchorId="@+id/ivDusk"
             app:touchAnchorSide="bottom" />
 
-        <OnClick app:target="@+id/ivInfo"/>
+        <KeyFrameSet>
+            <KeyAttribute
+                android:alpha="0"
+                app:framePosition="0"
+                app:target="@+id/tvDescription" />
+            <KeyAttribute
+                android:alpha="0"
+                app:framePosition="0"
+                app:target="@+id/tvLorem" />
+
+            <KeyAttribute
+                android:alpha="1"
+                app:framePosition="100"
+                app:target="@+id/tvDescription" />
+            <KeyAttribute
+                android:alpha="1"
+                app:framePosition="100"
+                app:target="@+id/tvLorem" />
+        </KeyFrameSet>
 
     </Transition>
 
