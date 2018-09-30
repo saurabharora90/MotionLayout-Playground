@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 startActivity(Intent(this, TwoViewsMotionActivity::class.java))
             }
             R.id.tvttributes -> {
-                startActivity(Intent(this, ConstraintStateRobinhood::class.java))
+                startActivity(Intent(this, AttributeActivity::class.java))
             }
             R.id.tvKeyFrame -> {
                 startActivity(Intent(this, KeyFrameActivity::class.java))
