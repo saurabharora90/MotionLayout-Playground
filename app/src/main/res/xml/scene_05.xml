@@ -13,6 +13,12 @@
             app:touchAnchorSide="bottom" />
 
         <KeyFrameSet>
+            <KeyPosition app:target="@+id/ivArrow"
+                app:keyPositionType="pathRelative"
+                app:percentY="-0.2"
+                app:framePosition="20"/>
+
+
             <KeyAttribute
                 android:alpha="0"
                 app:framePosition="0"
@@ -21,12 +27,6 @@
                 android:alpha="0"
                 app:framePosition="0"
                 app:target="@+id/tvLorem" />
-            <KeyAttribute
-                app:framePosition="0"
-                app:target="@+id/ivInfo">
-                <CustomAttribute app:attributeName="Tint"
-                    app:customColorValue="#FFFFFF"/>
-            </KeyAttribute>
 
 
             <KeyAttribute
@@ -37,12 +37,7 @@
                 android:alpha="1"
                 app:framePosition="100"
                 app:target="@+id/tvLorem" />
-            <KeyAttribute
-                app:framePosition="100"
-                app:target="@+id/ivInfo">
-                <CustomAttribute app:attributeName="Tint"
-                    app:customColorValue="#0000FF"/>
-            </KeyAttribute>
+
         </KeyFrameSet>
 
     </Transition>
