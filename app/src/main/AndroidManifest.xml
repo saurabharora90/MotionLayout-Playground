@@ -21,6 +21,7 @@
         <activity android:name=".ConstraintStateRobinhood"
             android:label="Robinhood copy"/>
         <activity android:name=".KeyFrameActivity"/>
+        <activity android:name=".BasicMotionActivity" />
     </application>
 
 </manifest>

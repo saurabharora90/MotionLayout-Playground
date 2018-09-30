@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 startActivity(Intent(this, ConstraintStateRobinhood::class.java))
             }
             R.id.tvSimpleMotion -> {
-                startActivity(Intent(this, ConstraintStateRobinhood::class.java))
+                startActivity(Intent(this, BasicMotionActivity::class.java))
             }
             R.id.tvTwoViews -> {
                 startActivity(Intent(this, ConstraintStateRobinhood::class.java))
