@@ -62,4 +62,13 @@
         android:onClick="onClick"
         android:text="Google IO Example"/>
 
+    <TextView
+        android:id="@+id/tvCustom"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_height="?attr/listPreferredItemHeightSmall"
+        android:textSize="16sp"
+        android:onClick="onClick"
+        android:text="AppBarLayout driver custom motion layout"/>
+
 </LinearLayout>

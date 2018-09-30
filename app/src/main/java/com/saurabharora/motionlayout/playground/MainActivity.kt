@@ -26,6 +26,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 startActivity(Intent(this, KeyFrameActivity::class.java))
             R.id.tvIoExample ->
                 startActivity(Intent(this, GoogleIOExampleActivity::class.java))
+            R.id.tvCustom ->
+                startActivity(Intent(this, CustomDrivenActivity::class.java))
         }
     }
 }
