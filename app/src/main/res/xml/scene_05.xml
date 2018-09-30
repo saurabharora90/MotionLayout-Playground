@@ -45,6 +45,17 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <Constraint
+            android:id="@+id/ivArrow"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="8dp"
+            android:rotation="90"
+            app:layout_constraintBottom_toBottomOf="@id/ivInfo"
+            app:layout_constraintEnd_toStartOf="@id/ivInfo"
+            app:layout_constraintTop_toTopOf="@id/ivInfo"
+            app:srcCompat="@android:drawable/arrow_up_float" />
+
     </ConstraintSet>
 
     <ConstraintSet android:id="@+id/end">
@@ -56,6 +67,16 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/ivArrow"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:rotation="180"
+            app:layout_constraintBottom_toTopOf="@id/ivInfo"
+            app:layout_constraintEnd_toEndOf="@id/ivInfo"
+            app:layout_constraintStart_toStartOf="@id/ivInfo"
+            app:srcCompat="@android:drawable/arrow_up_float" />
     </ConstraintSet>
 
 </MotionScene>
