@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 startActivity(Intent(this, ConstraintStateRobinhood::class.java))
             }
             R.id.tvKeyFrame -> {
-                startActivity(Intent(this, ConstraintStateRobinhood::class.java))
+                startActivity(Intent(this, KeyFrameActivity::class.java))
             }
         }
     }

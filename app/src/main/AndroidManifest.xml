@@ -20,7 +20,7 @@
         </activity>
         <activity android:name=".ConstraintStateRobinhood"
             android:label="Robinhood copy"/>
-        <activity android:name=".BasicMotionActivity"/>
+        <activity android:name=".KeyFrameActivity"/>
     </application>
 
 </manifest>
