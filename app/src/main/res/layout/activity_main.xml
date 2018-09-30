@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvConstraintState"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_height="?attr/listPreferredItemHeightSmall"
+        android:textSize="16sp"
+        android:onClick="onClick"
+        android:text="Constraint State Example"/>
+
+    <TextView
+        android:id="@+id/tvSimpleMotion"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_height="?attr/listPreferredItemHeightSmall"
+        android:textSize="16sp"
+        android:onClick="onClick"
+        android:text="Basic Motion example"/>
+
+    <TextView
+        android:id="@+id/tvTwoViews"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_height="?attr/listPreferredItemHeightSmall"
+        android:textSize="16sp"
+        android:onClick="onClick"
+        android:text="Basic Motion with 2 views"/>
+
+    <TextView
+        android:id="@+id/tvttributes"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_height="?attr/listPreferredItemHeightSmall"
+        android:textSize="16sp"
+        android:onClick="onClick"
+        android:text="Basic Motion with custom attribute animating"/>
+
+    <TextView
+        android:id="@+id/tvKeyFrame"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_height="?attr/listPreferredItemHeightSmall"
+        android:textSize="16sp"
+        android:onClick="onClick"
+        android:text="Basic Motion with Keyframes"/>
+
+</LinearLayout>
