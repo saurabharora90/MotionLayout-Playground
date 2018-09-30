@@ -24,6 +24,7 @@
         <activity android:name=".BasicMotionActivity" />
         <activity android:name=".TwoViewsMotionActivity" />
         <activity android:name=".AttributeActivity" />
+        <activity android:name=".GoogleIOExampleActivity" />
     </application>
 
 </manifest>

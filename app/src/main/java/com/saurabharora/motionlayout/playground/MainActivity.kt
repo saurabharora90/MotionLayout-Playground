@@ -13,22 +13,19 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(v: View?) {
-        when(v?.id) {
-            R.id.tvConstraintState -> {
+        when (v?.id) {
+            R.id.tvConstraintState ->
                 startActivity(Intent(this, ConstraintStateRobinhood::class.java))
-            }
-            R.id.tvSimpleMotion -> {
+            R.id.tvSimpleMotion ->
                 startActivity(Intent(this, BasicMotionActivity::class.java))
-            }
-            R.id.tvTwoViews -> {
+            R.id.tvTwoViews ->
                 startActivity(Intent(this, TwoViewsMotionActivity::class.java))
-            }
-            R.id.tvttributes -> {
+            R.id.tvttributes ->
                 startActivity(Intent(this, AttributeActivity::class.java))
-            }
-            R.id.tvKeyFrame -> {
+            R.id.tvKeyFrame ->
                 startActivity(Intent(this, KeyFrameActivity::class.java))
-            }
+            R.id.tvIoExample ->
+                startActivity(Intent(this, GoogleIOExampleActivity::class.java))
         }
     }
 }

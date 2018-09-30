@@ -53,4 +53,13 @@
         android:onClick="onClick"
         android:text="Basic Motion with Keyframes"/>
 
+    <TextView
+        android:id="@+id/tvIoExample"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_height="?attr/listPreferredItemHeightSmall"
+        android:textSize="16sp"
+        android:onClick="onClick"
+        android:text="Google IO Example"/>
+
 </LinearLayout>
