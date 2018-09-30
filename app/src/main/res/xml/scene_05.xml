@@ -13,10 +13,11 @@
             app:touchAnchorSide="bottom" />
 
         <KeyFrameSet>
-            <KeyPosition app:target="@+id/ivArrow"
+            <KeyPosition
+                app:framePosition="20"
                 app:keyPositionType="pathRelative"
                 app:percentY="-0.2"
-                app:framePosition="20"/>
+                app:target="@+id/ivArrow" />
 
 
             <KeyAttribute
@@ -61,8 +62,7 @@
             android:rotation="90"
             app:layout_constraintBottom_toBottomOf="@id/ivInfo"
             app:layout_constraintEnd_toStartOf="@id/ivInfo"
-            app:layout_constraintTop_toTopOf="@id/ivInfo"
-            app:srcCompat="@android:drawable/arrow_up_float" />
+            app:layout_constraintTop_toTopOf="@id/ivInfo" />
 
         <Constraint
             android:id="@+id/ivInfo"
@@ -71,7 +71,13 @@
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
             app:layout_constraintBottom_toBottomOf="@id/ivDusk"
-            app:layout_constraintEnd_toEndOf="@id/ivDusk"/>
+            app:layout_constraintEnd_toEndOf="@id/ivDusk">
+
+            <CustomAttribute
+                app:attributeName="ColorFilter"
+                app:customColorValue="#FFFFFF" />
+
+        </Constraint>
 
     </ConstraintSet>
 
@@ -93,18 +99,22 @@
             android:layout_marginBottom="16dp"
             android:rotation="180"
             app:layout_constraintBottom_toBottomOf="@id/ivDusk"
-            app:layout_constraintEnd_toEndOf="@id/ivDusk"
-            app:srcCompat="@android:drawable/arrow_up_float" />
+            app:layout_constraintEnd_toEndOf="@id/ivDusk" />
 
         <Constraint
             android:id="@+id/ivInfo"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            app:layout_constraintStart_toStartOf="@id/ivDusk"
             app:layout_constraintBottom_toBottomOf="@id/ivDusk"
-            app:layout_constraintTop_toBottomOf="@id/ivDusk"
             app:layout_constraintEnd_toEndOf="@id/ivDusk"
-            app:srcCompat="@android:drawable/ic_menu_info_details"/>
+            app:layout_constraintStart_toStartOf="@id/ivDusk"
+            app:layout_constraintTop_toBottomOf="@id/ivDusk">
+
+            <CustomAttribute
+                app:attributeName="ColorFilter"
+                app:customColorValue="#FF0000" />
+
+        </Constraint>
     </ConstraintSet>
 
 </MotionScene>
