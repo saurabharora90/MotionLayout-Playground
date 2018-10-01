@@ -41,6 +41,9 @@ class CustomDrivenActivity : AppCompatActivity() {
         }
 
         setSupportActionBar(toolbar)
-        supportActionBar?.let { it.setDisplayHomeAsUpEnabled(true) }
+        supportActionBar?.let {
+            it.setDisplayHomeAsUpEnabled(true)
+            it.title = ""
+        }
     }
 }
