@@ -23,6 +23,14 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <Constraint
+            android:id="@+id/ivProfile"
+            android:layout_width="@dimen/profile_image_size"
+            android:layout_height="@dimen/profile_image_size"
+            app:layout_constraintBottom_toBottomOf="@+id/profileImageSpace"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
     </ConstraintSet>
 
     <ConstraintSet android:id="@+id/end">
@@ -46,6 +54,15 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <Constraint
+            android:id="@+id/ivProfile"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="48dp"
+            app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/toolbar"/>
+
     </ConstraintSet>
 
     <Transition
@@ -62,6 +79,13 @@
                 android:alpha="1"
                 app:framePosition="50"
                 app:target="@+id/background" />
+
+            <KeyPosition
+                app:framePosition="20"
+                app:sizePercent="0"
+                app:percentX="0"
+                app:percentY="0"
+                app:target="@+id/ivProfile" />
         </KeyFrameSet>
 
     </Transition>

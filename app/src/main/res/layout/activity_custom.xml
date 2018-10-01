@@ -50,44 +50,45 @@
                 app:layout_constraintBottom_toBottomOf="@+id/space"
                 app:layout_constraintEnd_toEndOf="@+id/space"
                 app:layout_constraintStart_toStartOf="@+id/space"
-                app:layout_constraintTop_toTopOf="@+id/space">
+                app:layout_constraintTop_toTopOf="@+id/space" />
 
+            <TextView
+                android:id="@+id/tvProfileName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="3dp"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="hola_itsme"
+                android:textColor="#dd000000"
+                android:textSize="22sp"
+                app:layout_constraintBottom_toTopOf="@+id/tvProfileDescription"
+                app:layout_constraintEnd_toEndOf="@id/profileInfoCard"
+                app:layout_constraintStart_toStartOf="@id/profileInfoCard"
+                app:layout_constraintTop_toTopOf="@+id/space"
+                app:layout_constraintVertical_chainStyle="packed"
+                tools:ignore="RelativeOverlap" />
 
-                <LinearLayout
-                    android:id="@+id/profileContent"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:alpha="0.8"
-                    android:gravity="center"
-                    android:orientation="vertical">
+            <TextView
+                android:id="@+id/tvProfileDescription"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:elevation="3dp"
+                android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:maxLines="2"
+                android:alpha="0.5"
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp"
+                android:text="Space to write your profile description which can be up to 2 lines max"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/space"
+                app:layout_constraintEnd_toEndOf="@id/profileInfoCard"
+                app:layout_constraintStart_toStartOf="@id/profileInfoCard"
+                app:layout_constraintTop_toBottomOf="@+id/tvProfileName" />
 
-                    <TextView
-                        android:id="@+id/tvProfileName"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:maxLines="1"
-                        android:singleLine="true"
-                        android:text="hola_itsme"
-                        android:textColor="#dd000000"
-                        android:textSize="22sp"
-                        tools:ignore="RelativeOverlap" />
-
-                    <TextView
-                        android:id="@+id/tvProfileDescription"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:ellipsize="end"
-                        android:gravity="center_horizontal"
-                        android:maxLines="2"
-                        android:text="Space to write your profile description"
-                        android:textColor="@color/black"
-                        android:textSize="16sp" />
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
 
             <Space
                 android:id="@+id/space"
