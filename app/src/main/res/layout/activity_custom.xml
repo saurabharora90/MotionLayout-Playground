@@ -66,8 +66,7 @@
                 app:layout_constraintEnd_toEndOf="@id/profileInfoCard"
                 app:layout_constraintStart_toStartOf="@id/profileInfoCard"
                 app:layout_constraintTop_toTopOf="@+id/space"
-                app:layout_constraintVertical_chainStyle="packed"
-                tools:ignore="RelativeOverlap" />
+                app:layout_constraintVertical_chainStyle="packed" />
 
             <TextView
                 android:id="@+id/tvProfileDescription"

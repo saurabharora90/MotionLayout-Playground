@@ -31,6 +31,17 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
+        <Constraint
+            android:id="@+id/tvProfileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="3dp"
+            app:layout_constraintBottom_toTopOf="@+id/tvProfileDescription"
+            app:layout_constraintEnd_toEndOf="@id/profileInfoCard"
+            app:layout_constraintStart_toStartOf="@id/profileInfoCard"
+            app:layout_constraintTop_toTopOf="@+id/space"
+            app:layout_constraintVertical_chainStyle="packed" />
+
     </ConstraintSet>
 
     <ConstraintSet android:id="@+id/end">
@@ -61,7 +72,17 @@
             android:layout_marginStart="48dp"
             app:layout_constraintBottom_toBottomOf="@+id/toolbar"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/toolbar"/>
+            app:layout_constraintTop_toTopOf="@+id/toolbar" />
+
+        <Constraint
+            android:id="@+id/tvProfileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:elevation="6dp"
+            app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+            app:layout_constraintStart_toEndOf="@id/ivProfile"
+            app:layout_constraintTop_toTopOf="@+id/toolbar" />
 
     </ConstraintSet>
 
@@ -82,10 +103,16 @@
 
             <KeyPosition
                 app:framePosition="20"
-                app:sizePercent="0"
                 app:percentX="0"
                 app:percentY="0"
+                app:sizePercent="0"
                 app:target="@+id/ivProfile" />
+
+            <KeyPosition
+                app:framePosition="20"
+                app:percentX="0"
+                app:percentY="0"
+                app:target="@+id/tvProfileName" />
         </KeyFrameSet>
 
     </Transition>
