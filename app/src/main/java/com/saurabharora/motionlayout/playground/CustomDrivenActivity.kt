@@ -24,10 +24,23 @@ class CustomDrivenActivity : AppCompatActivity() {
         animalNames.add("Camel")
         animalNames.add("Sheep")
         animalNames.add("Goat")
+        animalNames.add("Dog")
+        animalNames.add("Cat")
+        animalNames.add("Ant")
+        animalNames.add("Rat")
+        animalNames.add("Crocodile")
+        animalNames.add("Lion")
+        animalNames.add("Tiger")
+        animalNames.add("Cheetah")
+        animalNames.add("Elephant")
+        animalNames.add("Leopard")
 
         rv.apply {
             layoutManager = LinearLayoutManager(this@CustomDrivenActivity)
             adapter = AnimalAdapter(this@CustomDrivenActivity, animalNames)
         }
+
+        setSupportActionBar(toolbar)
+        supportActionBar?.let { it.setDisplayHomeAsUpEnabled(true) }
     }
 }

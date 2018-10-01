@@ -9,12 +9,15 @@
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:stateListAnimator="@animator/default_not_elevated"
-        android:background="@color/pale_grey">
+        android:background="@color/pale_grey"
+        android:stateListAnimator="@animator/default_not_elevated">
 
         <com.saurabharora.motionlayout.playground.customview.MotionLayoutAppBarDriven
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            app:layoutDescription="@xml/scene_06"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed">
 
             <ImageView
                 android:id="@+id/ivBanner"
@@ -65,10 +68,10 @@
                         android:layout_height="wrap_content"
                         android:maxLines="1"
                         android:singleLine="true"
+                        android:text="hola_itsme"
                         android:textColor="#dd000000"
                         android:textSize="22sp"
-                        tools:ignore="RelativeOverlap"
-                        android:text="hola_itsme" />
+                        tools:ignore="RelativeOverlap" />
 
                     <TextView
                         android:id="@+id/tvProfileDescription"
@@ -110,12 +113,12 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
+                android:text="0"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="@id/guideline"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ivGradient"
-                android:text="0" />
+                app:layout_constraintTop_toBottomOf="@+id/ivGradient" />
 
             <TextView
                 android:id="@+id/tvBookmarked"
@@ -129,27 +132,17 @@
                 app:layout_constraintStart_toStartOf="@+id/tvBookmarkedCount"
                 app:layout_constraintTop_toBottomOf="@id/tvBookmarkedCount" />
 
-            <View
-                android:id="@+id/bookmarkClickArea"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:foreground="?attr/selectableItemBackgroundBorderless"
-                app:layout_constraintBottom_toBottomOf="@id/tvBookmarked"
-                app:layout_constraintLeft_toLeftOf="@id/tvBookmarkedCount"
-                app:layout_constraintRight_toRightOf="@id/tvBookmarkedCount"
-                app:layout_constraintTop_toTopOf="@id/tvBookmarkedCount" />
-
             <TextView
                 android:id="@+id/tvReactedCount"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
+                android:text="0"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@id/guideline"
-                app:layout_constraintTop_toBottomOf="@+id/ivGradient"
-                android:text="0" />
+                app:layout_constraintTop_toBottomOf="@+id/ivGradient" />
 
             <TextView
                 android:id="@+id/tvReacted"
@@ -163,23 +156,6 @@
                 app:layout_constraintStart_toStartOf="@+id/tvReactedCount"
                 app:layout_constraintTop_toBottomOf="@id/tvReactedCount" />
 
-            <View
-                android:id="@+id/reactedClickArea"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:foreground="?attr/selectableItemBackgroundBorderless"
-                app:layout_constraintBottom_toBottomOf="@id/tvReacted"
-                app:layout_constraintLeft_toLeftOf="@id/tvReactedCount"
-                app:layout_constraintRight_toRightOf="@id/tvReactedCount"
-                app:layout_constraintTop_toTopOf="@id/tvBookmarkedCount" />
-
-            <androidx.constraintlayout.widget.Barrier
-                android:id="@+id/barrier2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:barrierDirection="bottom"
-                app:constraint_referenced_ids="tvReacted,tvBookmarked" />
-
             <ImageView
                 android:id="@+id/ivCurve"
                 android:layout_width="0dp"
@@ -188,7 +164,7 @@
                 android:scaleType="fitXY"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/barrier2"
+                app:layout_constraintTop_toBottomOf="@+id/tvBookmarked"
                 app:srcCompat="@drawable/curve_profile" />
 
             <View
@@ -199,7 +175,7 @@
                 app:layout_constraintBottom_toBottomOf="@id/ivCurve"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/barrier2" />
+                app:layout_constraintTop_toBottomOf="@+id/tvBookmarked" />
 
             <Space
                 android:id="@+id/profileImageSpace"
@@ -230,6 +206,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:constraint_referenced_ids="tvReacted,tvReactedCount,tvBookmarked,tvBookmarkedCount" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:alpha="0"
+                android:background="?attr/colorPrimary"
+                android:elevation="4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
         </com.saurabharora.motionlayout.playground.customview.MotionLayoutAppBarDriven>
 

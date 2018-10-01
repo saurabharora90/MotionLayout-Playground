@@ -9,11 +9,12 @@ class MotionLayoutAppBarDriven @JvmOverloads constructor(
         context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 ) : MotionLayout(context, attrs, defStyleAttr), AppBarLayout.OnOffsetChangedListener {
 
-    override fun onOffsetChanged(p0: AppBarLayout?, p1: Int) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    override fun onOffsetChanged(appBarLayout: AppBarLayout?, verticalOffset: Int) {
+        progress = -verticalOffset / appBarLayout?.totalScrollRange?.toFloat()!!
     }
 
     override fun onAttachedToWindow() {
         super.onAttachedToWindow()
+        (parent as? AppBarLayout)?.addOnOffsetChangedListener(this)
     }
 }
