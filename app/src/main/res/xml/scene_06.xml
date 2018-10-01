@@ -40,7 +40,13 @@
             app:layout_constraintEnd_toEndOf="@id/profileInfoCard"
             app:layout_constraintStart_toStartOf="@id/profileInfoCard"
             app:layout_constraintTop_toTopOf="@+id/space"
-            app:layout_constraintVertical_chainStyle="packed" />
+            app:layout_constraintVertical_chainStyle="packed">
+
+            <CustomAttribute
+                app:attributeName="TextColor"
+                app:customColorValue="@color/black" />
+
+        </Constraint>
 
     </ConstraintSet>
 
@@ -69,7 +75,7 @@
             android:id="@+id/ivProfile"
             android:layout_width="35dp"
             android:layout_height="35dp"
-            android:layout_marginStart="48dp"
+            android:layout_marginStart="56dp"
             app:layout_constraintBottom_toBottomOf="@+id/toolbar"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/toolbar" />
@@ -78,11 +84,17 @@
             android:id="@+id/tvProfileName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="16dp"
             android:elevation="6dp"
             app:layout_constraintBottom_toBottomOf="@+id/toolbar"
             app:layout_constraintStart_toEndOf="@id/ivProfile"
-            app:layout_constraintTop_toTopOf="@+id/toolbar" />
+            app:layout_constraintTop_toTopOf="@+id/toolbar">
+
+            <CustomAttribute
+                app:attributeName="TextColor"
+                app:customColorValue="@color/white" />
+
+        </Constraint>
 
     </ConstraintSet>
 
@@ -109,10 +121,32 @@
                 app:target="@+id/ivProfile" />
 
             <KeyPosition
+                app:framePosition="45"
+                app:percentX="0.9"
+                app:sizePercent="0.90"
+                app:target="@+id/ivProfile" />
+
+            <KeyPosition
                 app:framePosition="20"
                 app:percentX="0"
                 app:percentY="0"
                 app:target="@+id/tvProfileName" />
+
+            <KeyAttribute
+                app:framePosition="50"
+                app:target="@+id/tvProfileName">
+                <CustomAttribute
+                    app:attributeName="TextColor"
+                    app:customColorValue="@color/black" />
+            </KeyAttribute>
+
+            <KeyAttribute
+                app:framePosition="80"
+                app:target="@+id/tvProfileName">
+                <CustomAttribute
+                    app:attributeName="TextColor"
+                    app:customColorValue="@color/white" />
+            </KeyAttribute>
         </KeyFrameSet>
 
     </Transition>

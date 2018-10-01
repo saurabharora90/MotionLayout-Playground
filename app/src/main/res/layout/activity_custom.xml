@@ -60,8 +60,8 @@
                 android:maxLines="1"
                 android:singleLine="true"
                 android:text="hola_itsme"
-                android:textColor="#dd000000"
-                android:textSize="22sp"
+                android:textColor="@color/black"
+                android:textSize="20sp"
                 app:layout_constraintBottom_toTopOf="@+id/tvProfileDescription"
                 app:layout_constraintEnd_toEndOf="@id/profileInfoCard"
                 app:layout_constraintStart_toStartOf="@id/profileInfoCard"
@@ -214,6 +214,7 @@
                 android:alpha="0"
                 android:background="?attr/colorPrimary"
                 android:elevation="4dp"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
