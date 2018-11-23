@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        app:constraintSetStart="@id/start"
+        app:constraintSetEnd="@id/end"
+        app:duration="1000">
+
+        <OnSwipe app:dragDirection="dragRight"
+            app:touchAnchorSide="left"
+            app:touchAnchorId="@+id/ivSun"/>
+
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+
+        <Constraint
+            android:id="@+id/ivHouse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="2dp"
+            app:layout_constraintVertical_bias="0.3"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Constraint
+            android:id="@+id/ivSun"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:elevation="1dp"
+            app:layout_constraintBottom_toTopOf="@id/ivHouse"
+            app:layout_constraintTop_toTopOf="@id/ivHouse"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <CustomAttribute
+                app:attributeName="ColorFilter"
+                app:customColorValue="#FDB813" />
+
+        </Constraint>
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+
+        <Constraint
+            android:id="@+id/ivHouse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="2dp"
+            app:layout_constraintVertical_bias="0.3"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Constraint
+            android:id="@+id/ivSun"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:elevation="1dp"
+            android:rotation="180"
+            app:layout_constraintBottom_toTopOf="@id/ivHouse"
+            app:layout_constraintTop_toTopOf="@id/ivHouse"
+            app:layout_constraintStart_toEndOf="parent">
+
+            <CustomAttribute
+                app:attributeName="ColorFilter"
+                app:customColorValue="#ef8e38" />
+
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/ivMoon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:elevation="1dp"
+            app:layout_constraintBottom_toTopOf="@id/ivHouse"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Constraint
+            android:id="@+id/nightSky"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:alpha="1"
+            app:layout_constraintBottom_toBottomOf="@id/guideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </ConstraintSet>
+
+</MotionScene>

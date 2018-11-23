@@ -33,8 +33,8 @@
         android:elevation="1dp"
         app:srcCompat="@drawable/ic_sun"
         android:tint="#FDB813"
+        app:layout_constraintBottom_toTopOf="@id/ivHouse"
         app:layout_constraintTop_toTopOf="@id/ivHouse"
-        app:layout_constraintTop_toBottomOf="@id/ivHouse"
         app:layout_constraintStart_toEndOf="parent"/>
 
 
