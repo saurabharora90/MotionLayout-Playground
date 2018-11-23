@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <ImageView
+        android:id="@+id/ivHouse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="2dp"
+        android:src="@drawable/house"
+        android:adjustViewBounds="true"
+        app:layout_constraintVertical_bias="0.3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivSun"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:elevation="1dp"
+        app:srcCompat="@drawable/ic_sun"
+        android:tint="#FDB813"
+        app:layout_constraintTop_toTopOf="@id/ivHouse"
+        app:layout_constraintTop_toBottomOf="@id/ivHouse"
+        app:layout_constraintStart_toEndOf="parent"/>
+
+
+    <ImageView
+        android:id="@+id/ivMoon"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:elevation="1dp"
+        app:srcCompat="@drawable/ic_moon"
+        app:layout_constraintBottom_toTopOf="@id/ivHouse"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <View
+        android:id="@+id/bottomGreen"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#74975c"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline" />
+
+    <View
+        android:id="@+id/sky"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/sky_blue"
+        app:layout_constraintBottom_toBottomOf="@id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/nightSky"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:alpha="1"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

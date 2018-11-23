@@ -18,15 +18,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ConstraintStateRobinhood"
-            android:label="Robinhood copy"/>
-        <activity android:name=".KeyFrameActivity"/>
+        <activity
+            android:name=".ConstraintStateRobinhood"
+            android:label="Robinhood copy" />
+        <activity android:name=".KeyFrameActivity" />
         <activity android:name=".BasicMotionActivity" />
         <activity android:name=".TwoViewsMotionActivity" />
         <activity android:name=".AttributeActivity" />
         <activity android:name=".GoogleIOExampleActivity" />
-        <activity android:name=".CustomDrivenActivity"
-            android:theme="@style/CustomDrivenTheme"/>
+        <activity
+            android:name=".CustomDrivenActivity"
+            android:theme="@style/CustomDrivenTheme" />
+        <activity
+            android:name=".SunConstraintSetActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
     </application>
 
 </manifest>

@@ -8,4 +8,6 @@
     <color name="white">#FFFFFF</color>
     <color name="app_Background">#f3f3f3</color>
     <color name="pale_grey">#efedf4</color>
+
+    <color name="sky_blue">#87CEEB</color>
 </resources>
