@@ -71,4 +71,22 @@
         android:onClick="onClick"
         android:text="AppBarLayout driver custom motion layout"/>
 
+    <TextView
+        android:id="@+id/tvSun"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_height="?attr/listPreferredItemHeightSmall"
+        android:textSize="16sp"
+        android:onClick="onClick"
+        android:text="Day to Night example"/>
+
+    <TextView
+        android:id="@+id/tvPage"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_height="?attr/listPreferredItemHeightSmall"
+        android:textSize="16sp"
+        android:onClick="onClick"
+        android:text="Day to Night example with a ViewPager"/>
+
 </LinearLayout>

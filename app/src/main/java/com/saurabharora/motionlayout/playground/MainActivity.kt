@@ -28,6 +28,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 startActivity(Intent(this, GoogleIOExampleActivity::class.java))
             R.id.tvCustom ->
                 startActivity(Intent(this, CustomDrivenActivity::class.java))
+            R.id.tvSun ->
+                startActivity(Intent(this, SunConstraintSetActivity::class.java))
         }
     }
 }
