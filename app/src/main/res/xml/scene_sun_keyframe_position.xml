@@ -18,15 +18,20 @@
                 app:keyPositionType="pathRelative"
                 app:framePosition="50"/>
 
-            <!--<KeyAttribute
+            <KeyAttribute
                 app:target="@id/nightSky"
-                app:framePosition="70"
+                app:framePosition="60"
                 android:alpha="0.2"/>
 
             <KeyAttribute
-                app:framePosition="75"
+                app:framePosition="70"
                 app:target="@id/ivSun"
-                android:alpha="0.8"/>-->
+                android:alpha="0.8"/>
+
+            <KeyAttribute
+                app:framePosition="70"
+                app:target="@id/ivMoon"
+                android:alpha="0.2"/>
 
         </KeyFrameSet>
 
@@ -80,6 +85,7 @@
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:elevation="1dp"
+            android:alpha="0"
             app:layout_constraintBottom_toTopOf="@id/ivHouse"
             app:layout_constraintTop_toTopOf="@id/ivHouse"
             app:layout_constraintStart_toEndOf="parent">
