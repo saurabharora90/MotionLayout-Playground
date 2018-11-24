@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/root"
-    app:layoutDescription="@xml/scene_sun_custom_attribute"
+    app:layoutDescription="@xml/scene_sun_keyframe_position"
     android:orientation="vertical">
 
     <androidx.constraintlayout.widget.Guideline
@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.5" />
+        app:layout_constraintGuide_percent="0.55" />
 
     <ImageView
         android:id="@+id/ivHouse"
@@ -21,7 +21,7 @@
         android:elevation="2dp"
         android:src="@drawable/house"
         android:adjustViewBounds="true"
-        app:layout_constraintVertical_bias="0.3"
+        app:layout_constraintVertical_bias="0.4"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
