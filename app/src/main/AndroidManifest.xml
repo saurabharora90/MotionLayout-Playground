@@ -33,6 +33,9 @@
             android:name=".SunConstraintSetActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".MotionViewPagerActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
     </application>
 
 </manifest>

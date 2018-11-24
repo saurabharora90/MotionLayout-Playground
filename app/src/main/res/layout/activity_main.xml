@@ -81,7 +81,7 @@
         android:text="Day to Night example"/>
 
     <TextView
-        android:id="@+id/tvPage"
+        android:id="@+id/tvViewPager"
         android:layout_width="match_parent"
         android:gravity="center_vertical"
         android:layout_height="?attr/listPreferredItemHeightSmall"

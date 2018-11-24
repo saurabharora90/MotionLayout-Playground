@@ -30,6 +30,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 startActivity(Intent(this, CustomDrivenActivity::class.java))
             R.id.tvSun ->
                 startActivity(Intent(this, SunConstraintSetActivity::class.java))
+            R.id.tvViewPager ->
+                startActivity(Intent(this, MotionViewPagerActivity::class.java))
         }
     }
 }
