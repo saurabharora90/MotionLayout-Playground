@@ -45,33 +45,7 @@
 
     <ConstraintSet android:id="@+id/start">
 
-        <Constraint
-            android:id="@+id/ivDusk"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Constraint
-            android:id="@+id/ivArrow"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_marginEnd="8dp"
-            android:rotation="90"
-            app:layout_constraintBottom_toBottomOf="@id/ivInfo"
-            app:layout_constraintEnd_toStartOf="@id/ivInfo"
-            app:layout_constraintTop_toTopOf="@id/ivInfo" />
-
-        <Constraint
-            android:id="@+id/ivInfo"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
-            app:layout_constraintBottom_toBottomOf="@id/ivDusk"
-            app:layout_constraintEnd_toEndOf="@id/ivDusk">
+        <Constraint android:id="@+id/ivInfo">
 
             <CustomAttribute
                 app:attributeName="ColorFilter"
@@ -82,33 +56,40 @@
     </ConstraintSet>
 
     <ConstraintSet android:id="@+id/end">
-        <Constraint
-            android:id="@+id/ivDusk"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="@id/guideline3"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        <Constraint android:id="@+id/ivDusk">
 
-        <Constraint
-            android:id="@+id/ivArrow"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="16dp"
-            android:rotation="180"
-            app:layout_constraintBottom_toBottomOf="@id/ivDusk"
-            app:layout_constraintEnd_toEndOf="@id/ivDusk" />
+            <Layout
+                app:layout_constraintBottom_toBottomOf="@id/guideline3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_height="0dp"
+                app:layout_width="0dp" />
 
-        <Constraint
-            android:id="@+id/ivInfo"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            app:layout_constraintBottom_toBottomOf="@id/ivDusk"
-            app:layout_constraintEnd_toEndOf="@id/ivDusk"
-            app:layout_constraintStart_toStartOf="@id/ivDusk"
-            app:layout_constraintTop_toBottomOf="@id/ivDusk">
+        </Constraint>
+
+        <Constraint android:id="@+id/ivArrow">
+            <Layout
+                app:layout_constraintBottom_toBottomOf="@id/ivDusk"
+                app:layout_constraintEnd_toEndOf="@id/ivDusk"
+                app:layout_height="24dp"
+                app:layout_marginBottom="16dp"
+                app:layout_marginEnd="8dp"
+                app:layout_width="24dp" />
+            
+            <Transform app:rotation="180" />
+
+        </Constraint>
+
+        <Constraint android:id="@+id/ivInfo">
+
+            <Layout
+                app:layout_constraintBottom_toBottomOf="@id/ivDusk"
+                app:layout_constraintEnd_toEndOf="@id/ivDusk"
+                app:layout_constraintStart_toStartOf="@id/ivDusk"
+                app:layout_constraintTop_toBottomOf="@id/ivDusk"
+                app:layout_height="48dp"
+                app:layout_width="48dp" />
 
             <CustomAttribute
                 app:attributeName="ColorFilter"

@@ -6,75 +6,70 @@
         motion:constraintSetEnd="@+id/end"
         motion:constraintSetStart="@+id/start"
         motion:duration="2000">
-        <OnClick
-            motion:target="@+id/button" />
+        <OnClick motion:target="@+id/button" />
 
         <KeyFrameSet>
-            <KeyPosition motion:target="@id/tvText"
-                motion:keyPositionType="deltaRelative"
+            <KeyPosition
                 motion:framePosition="25"
-                motion:percentX="0.85"
-                motion:percentY="0.15"/>
-
-            <KeyPosition motion:target="@id/tvText"
                 motion:keyPositionType="deltaRelative"
-                motion:framePosition="50"
-                motion:percentX="0.15"
-                motion:percentY="0.5"/>
+                motion:percentX="0.85"
+                motion:percentY="0.15"
+                motion:target="@id/tvText" />
 
-            <KeyAttribute motion:framePosition="50"
-                motion:target="@id/button"
+            <KeyPosition
+                motion:framePosition="50"
+                motion:keyPositionType="deltaRelative"
+                motion:percentX="0.15"
+                motion:percentY="0.5"
+                motion:target="@id/tvText" />
+
+            <KeyAttribute
+                android:alpha="0.5"
                 android:rotation="45"
                 android:scaleX="0.0"
-                android:alpha="0.5"
-                android:scaleY="0.0"/>
+                android:scaleY="0.0"
+                motion:framePosition="50"
+                motion:target="@id/button" />
 
         </KeyFrameSet>
     </Transition>
 
     <ConstraintSet android:id="@+id/start">
-        <Constraint
-            android:id="@+id/button"
-            android:layout_width="104dp"
-            android:layout_height="104dp"
-            android:layout_marginStart="8dp"
-            motion:layout_constraintBottom_toBottomOf="parent"
-            motion:layout_constraintStart_toStartOf="parent"
-            motion:layout_constraintTop_toTopOf="parent" />
 
-        <Constraint
-            android:id="@+id/tvText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            motion:layout_constraintLeft_toLeftOf="@id/button"
-            motion:layout_constraintTop_toTopOf="parent">
+        <Constraint android:id="@+id/tvText">
 
-            <CustomAttribute motion:attributeName="TextColor"
-                motion:customColorValue="@color/black"/>
+            <CustomAttribute
+                motion:attributeName="TextColor"
+                motion:customColorValue="@color/black" />
 
         </Constraint>
 
     </ConstraintSet>
 
     <ConstraintSet android:id="@+id/end">
-        <Constraint
-            android:id="@+id/button"
-            android:layout_width="104dp"
-            android:layout_height="104dp"
-            android:layout_marginEnd="8dp"
-            motion:layout_constraintBottom_toBottomOf="parent"
-            motion:layout_constraintEnd_toEndOf="parent"
-            motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint android:id="@+id/button">
 
-        <Constraint
-            android:id="@+id/tvText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            motion:layout_constraintBottom_toBottomOf="parent"
-            motion:layout_constraintLeft_toLeftOf="@id/button">
+            <Layout
+                motion:layout_constraintBottom_toBottomOf="parent"
+                motion:layout_constraintEnd_toEndOf="parent"
+                motion:layout_constraintTop_toTopOf="parent"
+                motion:layout_height="104dp"
+                motion:layout_marginEnd="8dp"
+                motion:layout_width="104dp" />
 
-            <CustomAttribute motion:attributeName="TextColor"
-                motion:customColorValue="#FF0000"/>
+        </Constraint>
+
+        <Constraint android:id="@+id/tvText">
+
+            <Layout
+                motion:layout_constraintBottom_toBottomOf="parent"
+                motion:layout_constraintLeft_toLeftOf="@id/button"
+                motion:layout_height="wrap_content"
+                motion:layout_width="wrap_content" />
+
+            <CustomAttribute
+                motion:attributeName="TextColor"
+                motion:customColorValue="#FF0000" />
 
         </Constraint>
 

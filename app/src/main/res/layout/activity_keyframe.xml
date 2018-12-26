@@ -3,20 +3,27 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:showPaths="true"
-    app:layoutDescription="@xml/scene_04">
+    app:layoutDescription="@xml/scene_04"
+    app:showPaths="true">
 
     <View
         android:id="@+id/button"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
+        android:layout_width="104dp"
+        android:layout_height="104dp"
+        android:layout_marginStart="8dp"
         android:background="@color/colorAccent"
-        android:text="Button" />
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Start text" />
+        android:text="Start text"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toLeftOf="@id/button"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.motion.widget.MotionLayout>
