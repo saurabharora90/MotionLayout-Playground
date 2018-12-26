@@ -3,35 +3,37 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <Transition
-        app:constraintSetStart="@id/start"
         app:constraintSetEnd="@id/end"
+        app:constraintSetStart="@id/start"
         app:duration="1000">
 
-        <OnSwipe app:dragDirection="dragRight"
-            app:touchAnchorSide="left"
-            app:touchAnchorId="@+id/ivSun"/>
+        <OnSwipe
+            app:dragDirection="dragRight"
+            app:touchAnchorId="@+id/ivSun"
+            app:touchAnchorSide="left" />
 
         <KeyFrameSet>
 
-            <KeyPosition app:target="@id/ivSun"
-                app:percentY="-0.25"
+            <KeyPosition
+                app:framePosition="50"
                 app:keyPositionType="pathRelative"
-                app:framePosition="50"/>
+                app:percentY="-0.25"
+                app:target="@id/ivSun" />
 
             <KeyAttribute
-                app:target="@id/nightSky"
+                android:alpha="0.2"
                 app:framePosition="60"
-                android:alpha="0.2"/>
+                app:target="@id/nightSky" />
 
             <KeyAttribute
+                android:alpha="0.8"
                 app:framePosition="70"
-                app:target="@id/ivSun"
-                android:alpha="0.8"/>
+                app:target="@id/ivSun" />
 
             <KeyAttribute
+                android:alpha="0.2"
                 app:framePosition="70"
-                app:target="@id/ivMoon"
-                android:alpha="0.2"/>
+                app:target="@id/ivMoon" />
 
         </KeyFrameSet>
 
@@ -39,25 +41,8 @@
 
     <ConstraintSet android:id="@+id/start">
 
-        <Constraint
-            android:id="@+id/ivHouse"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:elevation="2dp"
-            app:layout_constraintVertical_bias="0.4"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
 
-        <Constraint
-            android:id="@+id/ivSun"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:elevation="1dp"
-            app:layout_constraintBottom_toTopOf="@id/ivHouse"
-            app:layout_constraintTop_toTopOf="@id/ivHouse"
-            app:layout_constraintStart_toStartOf="parent">
+        <Constraint android:id="@+id/ivSun">
 
             <CustomAttribute
                 app:attributeName="ColorFilter"
@@ -69,26 +54,16 @@
 
     <ConstraintSet android:id="@+id/end">
 
-        <Constraint
-            android:id="@+id/ivHouse"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:elevation="2dp"
-            app:layout_constraintVertical_bias="0.4"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+        <Constraint android:id="@+id/ivSun">
 
-        <Constraint
-            android:id="@+id/ivSun"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:elevation="1dp"
-            android:alpha="0"
-            app:layout_constraintBottom_toTopOf="@id/ivHouse"
-            app:layout_constraintTop_toTopOf="@id/ivHouse"
-            app:layout_constraintStart_toEndOf="parent">
+            <Layout
+                app:layout_constraintBottom_toTopOf="@id/ivHouse"
+                app:layout_constraintStart_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/ivHouse"
+                app:layout_height="80dp"
+                app:layout_width="80dp" />
+
+            <PropertySet app:alpha="0" />
 
             <CustomAttribute
                 app:attributeName="ColorFilter"
@@ -96,24 +71,17 @@
 
         </Constraint>
 
-        <Constraint
-            android:id="@+id/ivMoon"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:elevation="1dp"
-            app:layout_constraintBottom_toTopOf="@id/ivHouse"
-            app:layout_constraintEnd_toEndOf="parent" />
+        <Constraint android:id="@+id/ivMoon">
 
-        <Constraint
-            android:id="@+id/nightSky"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:alpha="1"
-            app:layout_constraintBottom_toBottomOf="@id/guideline"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            <PropertySet app:alpha="1" />
 
+        </Constraint>
+
+        <Constraint android:id="@+id/nightSky">
+
+            <PropertySet app:alpha="1" />
+
+        </Constraint>
     </ConstraintSet>
 
 </MotionScene>
