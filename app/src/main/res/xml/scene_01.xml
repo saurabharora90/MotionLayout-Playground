@@ -3,23 +3,25 @@
     xmlns:motion="http://schemas.android.com/apk/res-auto">
 
     <Transition
-        motion:constraintSetStart="@layout/activity_basic_motion"
         motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@layout/activity_basic_motion"
         motion:duration="500">
-        <OnClick
-            motion:target="@+id/button"/>
+        <OnClick motion:target="@+id/button" />
 
     </Transition>
 
     <ConstraintSet android:id="@+id/end">
-        <Constraint
-            android:id="@+id/button"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:layout_marginEnd="8dp"
-            motion:layout_constraintBottom_toBottomOf="parent"
-            motion:layout_constraintEnd_toEndOf="parent"
-            motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint android:id="@+id/button">
+
+            <Layout
+                motion:layout_width="64dp"
+                motion:layout_height="64dp"
+                motion:layout_marginEnd="8dp"
+                motion:layout_constraintBottom_toBottomOf="parent"
+                motion:layout_constraintEnd_toEndOf="parent"
+                motion:layout_constraintTop_toTopOf="parent" />
+
+        </Constraint>
 
     </ConstraintSet>
 
