@@ -1,92 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="16dp"
-    android:orientation="vertical"
+    android:layout_height="wrap_content"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/tvConstraintState"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:gravity="center_vertical"
-        android:layout_height="?attr/listPreferredItemHeightSmall"
-        android:textSize="16sp"
-        android:onClick="onClick"
-        android:text="Constraint State Example"/>
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
 
-    <TextView
-        android:id="@+id/tvSimpleMotion"
-        android:layout_width="match_parent"
-        android:gravity="center_vertical"
-        android:layout_height="?attr/listPreferredItemHeightSmall"
-        android:textSize="16sp"
-        android:onClick="onClick"
-        android:text="Basic Motion example"/>
+        <TextView
+            android:id="@+id/tvConstraintState"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/listPreferredItemHeightSmall"
+            android:gravity="center_vertical"
+            android:onClick="onClick"
+            android:text="Constraint State Example"
+            android:textSize="16sp" />
 
-    <TextView
-        android:id="@+id/tvTwoViews"
-        android:layout_width="match_parent"
-        android:gravity="center_vertical"
-        android:layout_height="?attr/listPreferredItemHeightSmall"
-        android:textSize="16sp"
-        android:onClick="onClick"
-        android:text="Basic Motion with 2 views"/>
+        <TextView
+            android:id="@+id/tvSimpleMotion"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/listPreferredItemHeightSmall"
+            android:gravity="center_vertical"
+            android:onClick="onClick"
+            android:text="Basic Motion example"
+            android:textSize="16sp" />
 
-    <TextView
-        android:id="@+id/tvttributes"
-        android:layout_width="match_parent"
-        android:gravity="center_vertical"
-        android:layout_height="?attr/listPreferredItemHeightSmall"
-        android:textSize="16sp"
-        android:onClick="onClick"
-        android:text="Basic Motion with custom attribute animating"/>
+        <TextView
+            android:id="@+id/tvTwoViews"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/listPreferredItemHeightSmall"
+            android:gravity="center_vertical"
+            android:onClick="onClick"
+            android:text="Basic Motion with 2 views"
+            android:textSize="16sp" />
 
-    <TextView
-        android:id="@+id/tvKeyFrame"
-        android:layout_width="match_parent"
-        android:gravity="center_vertical"
-        android:layout_height="?attr/listPreferredItemHeightSmall"
-        android:textSize="16sp"
-        android:onClick="onClick"
-        android:text="Basic Motion with Keyframes"/>
+        <TextView
+            android:id="@+id/tvttributes"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/listPreferredItemHeightSmall"
+            android:gravity="center_vertical"
+            android:onClick="onClick"
+            android:text="Basic Motion with custom attribute animating"
+            android:textSize="16sp" />
 
-    <TextView
-        android:id="@+id/tvIoExample"
-        android:layout_width="match_parent"
-        android:gravity="center_vertical"
-        android:layout_height="?attr/listPreferredItemHeightSmall"
-        android:textSize="16sp"
-        android:onClick="onClick"
-        android:text="Google IO Example"/>
+        <TextView
+            android:id="@+id/tvKeyFrame"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/listPreferredItemHeightSmall"
+            android:gravity="center_vertical"
+            android:onClick="onClick"
+            android:text="Basic Motion with Keyframes"
+            android:textSize="16sp" />
 
-    <TextView
-        android:id="@+id/tvCustom"
-        android:layout_width="match_parent"
-        android:gravity="center_vertical"
-        android:layout_height="?attr/listPreferredItemHeightSmall"
-        android:textSize="16sp"
-        android:onClick="onClick"
-        android:text="AppBarLayout driver custom motion layout"/>
+        <TextView
+            android:id="@+id/tvIoExample"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/listPreferredItemHeightSmall"
+            android:gravity="center_vertical"
+            android:onClick="onClick"
+            android:text="Google IO Example"
+            android:textSize="16sp" />
 
-    <TextView
-        android:id="@+id/tvSun"
-        android:layout_width="match_parent"
-        android:gravity="center_vertical"
-        android:layout_height="?attr/listPreferredItemHeightSmall"
-        android:textSize="16sp"
-        android:onClick="onClick"
-        android:text="Day to Night example"/>
+        <TextView
+            android:id="@+id/tvCustom"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/listPreferredItemHeightSmall"
+            android:gravity="center_vertical"
+            android:onClick="onClick"
+            android:text="AppBarLayout driver custom motion layout"
+            android:textSize="16sp" />
 
-    <TextView
-        android:id="@+id/tvViewPager"
-        android:layout_width="match_parent"
-        android:gravity="center_vertical"
-        android:layout_height="?attr/listPreferredItemHeightSmall"
-        android:textSize="16sp"
-        android:onClick="onClick"
-        android:text="Day to Night example with a ViewPager"/>
+        <TextView
+            android:id="@+id/tvSun"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/listPreferredItemHeightSmall"
+            android:gravity="center_vertical"
+            android:onClick="onClick"
+            android:text="Day to Night example"
+            android:textSize="16sp" />
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/tvViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/listPreferredItemHeightSmall"
+            android:gravity="center_vertical"
+            android:onClick="onClick"
+            android:text="Day to Night example with a ViewPager"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</ScrollView>
