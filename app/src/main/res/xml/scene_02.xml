@@ -4,52 +4,35 @@
 
     <Transition
         motion:constraintSetEnd="@+id/end"
-        motion:constraintSetStart="@+id/start"
+        motion:constraintSetStart="@layout/activity_motion_two_views"
         motion:duration="2000">
         <OnSwipe
-            motion:touchAnchorId="@+id/button"
             motion:dragDirection="dragRight"
-            motion:touchAnchorSide="right"/>
+            motion:touchAnchorId="@+id/button"
+            motion:touchAnchorSide="right" />
 
     </Transition>
 
-    <ConstraintSet android:id="@+id/start">
-        <Constraint
-            android:id="@+id/button"
-            android:layout_width="104dp"
-            android:layout_height="104dp"
-            android:layout_marginStart="8dp"
-            motion:layout_constraintBottom_toBottomOf="parent"
-            motion:layout_constraintStart_toStartOf="parent"
-            motion:layout_constraintTop_toTopOf="parent" />
+    <ConstraintSet android:id="@+id/end">
+        <Constraint android:id="@+id/button">
 
-        <Constraint
-            android:id="@+id/tvText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            motion:layout_constraintLeft_toLeftOf="@id/button"
-            motion:layout_constraintTop_toTopOf="parent">
+            <Layout
+                motion:layout_constraintBottom_toBottomOf="parent"
+                motion:layout_constraintEnd_toEndOf="parent"
+                motion:layout_constraintTop_toTopOf="parent"
+                motion:layout_height="104dp"
+                motion:layout_marginEnd="8dp"
+                motion:layout_width="104dp" />
 
         </Constraint>
 
-    </ConstraintSet>
+        <Constraint android:id="@+id/tvText">
 
-    <ConstraintSet android:id="@+id/end">
-        <Constraint
-            android:id="@+id/button"
-            android:layout_width="104dp"
-            android:layout_height="104dp"
-            android:layout_marginEnd="8dp"
-            motion:layout_constraintBottom_toBottomOf="parent"
-            motion:layout_constraintEnd_toEndOf="parent"
-            motion:layout_constraintTop_toTopOf="parent" />
-
-        <Constraint
-            android:id="@+id/tvText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            motion:layout_constraintBottom_toBottomOf="parent"
-            motion:layout_constraintLeft_toLeftOf="@id/button">
+            <Layout
+                motion:layout_constraintBottom_toBottomOf="parent"
+                motion:layout_constraintRight_toRightOf="@id/button"
+                motion:layout_height="wrap_content"
+                motion:layout_width="wrap_content" />
 
         </Constraint>
 
