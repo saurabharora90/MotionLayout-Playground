@@ -16,9 +16,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:minHeight="?attr/actionBarSize"
+            app:layoutDescription="@xml/scene_06"
             app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
-            tools:applyMotionScene="false"
-            app:layoutDescription="@xml/scene_06">
+            tools:applyMotionScene="false">
 
             <ImageView
                 android:id="@+id/ivBanner"
@@ -57,7 +57,7 @@
                 android:id="@+id/tvProfileName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:elevation="3dp"
+                android:elevation="6dp"
                 android:maxLines="1"
                 android:singleLine="true"
                 android:text="hola_itsme"
@@ -74,11 +74,11 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:alpha="0.5"
                 android:elevation="3dp"
                 android:ellipsize="end"
                 android:gravity="center_horizontal"
                 android:maxLines="2"
-                android:alpha="0.5"
                 android:paddingStart="24dp"
                 android:paddingEnd="24dp"
                 android:text="Space to write your profile description which can be up to 2 lines max"
@@ -196,7 +196,6 @@
                 android:tint="#A4C639"
                 app:layout_constraintBottom_toBottomOf="@+id/profileImageSpace"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.50"
                 app:layout_constraintStart_toStartOf="parent"
                 app:siBorderColor="@color/pale_grey"
                 app:siBorderWidth="@dimen/circular_image_border"
