@@ -62,6 +62,6 @@ class DummyFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val count = arguments?.getInt("count", 0)
-        tvDummyText.text = "Dummy Fragment $count"
+        tvDummyText.text = "Dummy Fragment content $count"
     }
 }

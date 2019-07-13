@@ -43,10 +43,11 @@
         android:id="@+id/ivMoon"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:alpha="0"
         android:elevation="1dp"
-        app:layout_constraintBottom_toTopOf="@id/ivHouse"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:alpha="0"
+        android:rotation="180"
+        app:layout_constraintBottom_toBottomOf="@id/ivHouse"
+        app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/ic_moon" />
 
     <View

@@ -106,6 +106,12 @@
 
         <Constraint android:id="@+id/ivMoon">
 
+            <Layout
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                app:layout_constraintBottom_toTopOf="@id/ivHouse"
+                app:layout_constraintStart_toStartOf="parent"/>
+
             <PropertySet android:alpha="1" />
 
         </Constraint>
