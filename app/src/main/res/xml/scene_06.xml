@@ -18,13 +18,13 @@
 
         <Constraint android:id="@+id/toolbar">
 
-            <PropertySet app:alpha="1" />
+            <PropertySet android:alpha="1" />
 
         </Constraint>
 
         <Constraint android:id="@+id/background">
 
-            <PropertySet app:alpha="1" />
+            <PropertySet android:alpha="1" />
 
         </Constraint>
 
@@ -34,9 +34,9 @@
                 app:layout_constraintBottom_toBottomOf="@+id/toolbar"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/toolbar"
-                app:layout_height="35dp"
-                app:layout_marginStart="56dp"
-                app:layout_width="35dp" />
+                android:layout_height="35dp"
+                android:layout_marginStart="56dp"
+                android:layout_width="35dp" />
 
         </Constraint>
 
@@ -46,9 +46,9 @@
                 app:layout_constraintBottom_toBottomOf="@+id/toolbar"
                 app:layout_constraintStart_toEndOf="@id/ivProfile"
                 app:layout_constraintTop_toTopOf="@+id/toolbar"
-                app:layout_height="wrap_content"
-                app:layout_marginStart="16dp"
-                app:layout_width="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_width="wrap_content" />
 
             <CustomAttribute
                 app:attributeName="TextColor"
@@ -66,35 +66,35 @@
             <KeyAttribute
                 android:alpha="1"
                 app:framePosition="50"
-                app:target="@+id/toolbar" />
+                app:motionTarget="@+id/toolbar" />
 
             <KeyAttribute
                 android:alpha="1"
                 app:framePosition="50"
-                app:target="@+id/background" />
+                app:motionTarget="@+id/background" />
 
             <KeyPosition
                 app:framePosition="20"
                 app:percentX="0"
                 app:percentY="0"
                 app:sizePercent="0"
-                app:target="@+id/ivProfile" />
+                app:motionTarget="@+id/ivProfile" />
 
             <KeyPosition
                 app:framePosition="45"
                 app:percentX="0.9"
                 app:sizePercent="0.90"
-                app:target="@+id/ivProfile" />
+                app:motionTarget="@+id/ivProfile" />
 
             <KeyPosition
                 app:framePosition="20"
                 app:percentX="0"
                 app:percentY="0"
-                app:target="@+id/tvProfileName" />
+                app:motionTarget="@+id/tvProfileName" />
 
             <KeyAttribute
                 app:framePosition="50"
-                app:target="@+id/tvProfileName">
+                app:motionTarget="@+id/tvProfileName">
                 <CustomAttribute
                     app:attributeName="TextColor"
                     app:customColorValue="@color/black" />
@@ -102,7 +102,7 @@
 
             <KeyAttribute
                 app:framePosition="80"
-                app:target="@+id/tvProfileName">
+                app:motionTarget="@+id/tvProfileName">
                 <CustomAttribute
                     app:attributeName="TextColor"
                     app:customColorValue="@color/white" />

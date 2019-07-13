@@ -32,7 +32,7 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:elevation="1dp"
-        android:tint="#FDB813"
+        android:tint="#eedca5"
         app:layout_constraintBottom_toTopOf="@id/ivHouse"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/ivHouse"

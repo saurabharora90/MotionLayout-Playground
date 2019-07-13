@@ -14,26 +14,51 @@
 
         <KeyFrameSet>
 
+            <KeyAttribute
+                android:alpha="0.7"
+                app:framePosition="0"
+                app:motionTarget="@id/sky" />
+
             <KeyPosition
-                app:framePosition="50"
+                app:framePosition="30"
                 app:keyPositionType="pathRelative"
                 app:percentY="-0.25"
-                app:target="@id/ivSun" />
+                app:motionTarget="@id/ivSun" />
+
+            <KeyAttribute
+                android:alpha="1.0"
+                app:framePosition="30"
+                app:motionTarget="@id/sky" />
+
+            <KeyAttribute
+                android:alpha="1.0"
+                app:framePosition="30"
+                app:motionTarget="@id/ivSun">
+
+                <CustomAttribute app:attributeName="ColorFilter"
+                    app:customColorValue="#f2a94e"/>
+
+            </KeyAttribute>
+
+            <KeyAttribute
+                android:alpha="0"
+                app:framePosition="50"
+                app:motionTarget="@id/nightSky" />
 
             <KeyAttribute
                 android:alpha="0.2"
                 app:framePosition="60"
-                app:target="@id/nightSky" />
+                app:motionTarget="@id/nightSky" />
 
             <KeyAttribute
                 android:alpha="0.8"
                 app:framePosition="70"
-                app:target="@id/ivSun" />
+                app:motionTarget="@id/ivSun" />
 
             <KeyAttribute
                 android:alpha="0.2"
                 app:framePosition="70"
-                app:target="@id/ivMoon" />
+                app:motionTarget="@id/ivMoon" />
 
         </KeyFrameSet>
 
@@ -46,7 +71,7 @@
 
             <CustomAttribute
                 app:attributeName="ColorFilter"
-                app:customColorValue="#FDB813" />
+                app:customColorValue="#eedca5" />
 
         </Constraint>
 
@@ -60,26 +85,26 @@
                 app:layout_constraintBottom_toTopOf="@id/ivHouse"
                 app:layout_constraintStart_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@id/ivHouse"
-                app:layout_height="80dp"
-                app:layout_width="80dp" />
+                android:layout_height="80dp"
+                android:layout_width="80dp" />
 
-            <PropertySet app:alpha="0" />
+            <PropertySet android:alpha="0" />
 
             <CustomAttribute
                 app:attributeName="ColorFilter"
-                app:customColorValue="#ef8e38" />
+                app:customColorValue="#f0d084" />
 
         </Constraint>
 
         <Constraint android:id="@+id/ivMoon">
 
-            <PropertySet app:alpha="1" />
+            <PropertySet android:alpha="1" />
 
         </Constraint>
 
         <Constraint android:id="@+id/nightSky">
 
-            <PropertySet app:alpha="1" />
+            <PropertySet android:alpha="1" />
 
         </Constraint>
     </ConstraintSet>

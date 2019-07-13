@@ -6,7 +6,7 @@
         motion:constraintSetEnd="@+id/end"
         motion:constraintSetStart="@+id/start"
         motion:duration="2000">
-        <OnClick motion:target="@+id/button" />
+        <OnClick motion:targetId="@+id/button" />
 
         <KeyFrameSet>
             <KeyPosition
@@ -14,14 +14,14 @@
                 motion:keyPositionType="deltaRelative"
                 motion:percentX="0.85"
                 motion:percentY="0.15"
-                motion:target="@id/tvText" />
+                motion:targetId="@id/tvText" />
 
             <KeyPosition
                 motion:framePosition="50"
                 motion:keyPositionType="deltaRelative"
                 motion:percentX="0.15"
                 motion:percentY="0.5"
-                motion:target="@id/tvText" />
+                motion:targetId="@id/tvText" />
 
             <KeyAttribute
                 android:alpha="0.5"
@@ -29,7 +29,7 @@
                 android:scaleX="0.0"
                 android:scaleY="0.0"
                 motion:framePosition="50"
-                motion:target="@id/button" />
+                motion:targetId="@id/button" />
 
         </KeyFrameSet>
     </Transition>
@@ -53,9 +53,9 @@
                 motion:layout_constraintBottom_toBottomOf="parent"
                 motion:layout_constraintEnd_toEndOf="parent"
                 motion:layout_constraintTop_toTopOf="parent"
-                motion:layout_height="104dp"
-                motion:layout_marginEnd="8dp"
-                motion:layout_width="104dp" />
+                android:layout_height="104dp"
+                android:layout_marginEnd="8dp"
+                android:layout_width="104dp" />
 
         </Constraint>
 
@@ -64,8 +64,8 @@
             <Layout
                 motion:layout_constraintBottom_toBottomOf="parent"
                 motion:layout_constraintLeft_toLeftOf="@id/button"
-                motion:layout_height="wrap_content"
-                motion:layout_width="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" />
 
             <CustomAttribute
                 motion:attributeName="TextColor"

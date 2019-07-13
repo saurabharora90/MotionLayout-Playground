@@ -20,9 +20,9 @@
                 motion:layout_constraintBottom_toBottomOf="parent"
                 motion:layout_constraintEnd_toEndOf="parent"
                 motion:layout_constraintTop_toTopOf="parent"
-                motion:layout_height="104dp"
-                motion:layout_marginEnd="8dp"
-                motion:layout_width="104dp" />
+                android:layout_height="104dp"
+                android:layout_marginEnd="8dp"
+                android:layout_width="104dp" />
 
         </Constraint>
 
@@ -31,8 +31,8 @@
             <Layout
                 motion:layout_constraintBottom_toBottomOf="parent"
                 motion:layout_constraintRight_toRightOf="@id/button"
-                motion:layout_height="wrap_content"
-                motion:layout_width="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" />
 
         </Constraint>
 

@@ -17,27 +17,27 @@
                 app:framePosition="20"
                 app:keyPositionType="pathRelative"
                 app:percentY="-0.2"
-                app:target="@+id/ivArrow" />
+                app:motionTarget="@+id/ivArrow" />
 
 
             <KeyAttribute
                 android:alpha="0"
                 app:framePosition="0"
-                app:target="@+id/tvDescription" />
+                app:motionTarget="@+id/tvDescription" />
             <KeyAttribute
                 android:alpha="0"
                 app:framePosition="0"
-                app:target="@+id/tvLorem" />
+                app:motionTarget="@+id/tvLorem" />
 
 
             <KeyAttribute
                 android:alpha="1"
                 app:framePosition="100"
-                app:target="@+id/tvDescription" />
+                app:motionTarget="@+id/tvDescription" />
             <KeyAttribute
                 android:alpha="1"
                 app:framePosition="100"
-                app:target="@+id/tvLorem" />
+                app:motionTarget="@+id/tvLorem" />
 
         </KeyFrameSet>
 
@@ -63,8 +63,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_height="0dp"
-                app:layout_width="0dp" />
+                android:layout_height="0dp"
+                android:layout_width="0dp" />
 
         </Constraint>
 
@@ -72,12 +72,12 @@
             <Layout
                 app:layout_constraintBottom_toBottomOf="@id/ivDusk"
                 app:layout_constraintEnd_toEndOf="@id/ivDusk"
-                app:layout_height="24dp"
-                app:layout_marginBottom="16dp"
-                app:layout_marginEnd="8dp"
-                app:layout_width="24dp" />
+                android:layout_height="24dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_width="24dp" />
             
-            <Transform app:rotation="180" />
+            <Transform android:rotation="180" />
 
         </Constraint>
 
@@ -88,8 +88,8 @@
                 app:layout_constraintEnd_toEndOf="@id/ivDusk"
                 app:layout_constraintStart_toStartOf="@id/ivDusk"
                 app:layout_constraintTop_toBottomOf="@id/ivDusk"
-                app:layout_height="48dp"
-                app:layout_width="48dp" />
+                android:layout_height="48dp"
+                android:layout_width="48dp" />
 
             <CustomAttribute
                 app:attributeName="ColorFilter"
