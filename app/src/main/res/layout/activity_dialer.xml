@@ -6,125 +6,171 @@
     app:layoutDescription="@xml/scene_dialer">
 
     <View
-        android:id="@+id/background"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/dialerPad"
-        android:background="@color/colorPrimary"
         android:layout_width="match_parent"
+        android:layout_height="330dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/starKey"
+        style="@style/DialerKeyStyle"
+        android:text="*"
+        app:layout_constraintBottom_toBottomOf="@id/dialerPad"
+        app:layout_constraintEnd_toStartOf="@+id/zeroKey"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/zeroKey"
+        style="@style/DialerKeyStyle"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@id/starKey"
+        app:layout_constraintEnd_toStartOf="@+id/poundKey"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/starKey" />
+
+    <TextView
+        android:id="@+id/poundKey"
+        style="@style/DialerKeyStyle"
+        android:text="#"
+        app:layout_constraintBottom_toBottomOf="@id/starKey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/zeroKey" />
+
+    <TextView
+        android:id="@+id/sevenKey"
+        style="@style/DialerKeyStyle"
+        android:text="7"
+        app:layout_constraintBottom_toTopOf="@id/starKey"
+        app:layout_constraintEnd_toStartOf="@+id/eightKey"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/eightKey"
+        style="@style/DialerKeyStyle"
+        android:text="8"
+        app:layout_constraintBottom_toBottomOf="@id/sevenKey"
+        app:layout_constraintEnd_toStartOf="@+id/nineKey"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/sevenKey" />
+
+    <TextView
+        android:id="@+id/nineKey"
+        style="@style/DialerKeyStyle"
+        android:text="9"
+        app:layout_constraintBottom_toBottomOf="@id/sevenKey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/eightKey" />
+
+    <TextView
+        android:id="@+id/fourKey"
+        style="@style/DialerKeyStyle"
+        android:text="4"
+        app:layout_constraintBottom_toTopOf="@id/sevenKey"
+        app:layout_constraintEnd_toStartOf="@+id/fiveKey"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/fiveKey"
+        style="@style/DialerKeyStyle"
+        android:text="5"
+        app:layout_constraintBottom_toBottomOf="@id/fourKey"
+        app:layout_constraintEnd_toStartOf="@+id/sixKey"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/fourKey" />
+
+    <TextView
+        android:id="@+id/sixKey"
+        style="@style/DialerKeyStyle"
+        android:text="6"
+        app:layout_constraintBottom_toBottomOf="@id/fourKey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/fiveKey" />
+
+    <TextView
+        android:id="@+id/oneKey"
+        style="@style/DialerKeyStyle"
+        android:text="1"
+        app:layout_constraintBottom_toTopOf="@id/fourKey"
+        app:layout_constraintEnd_toStartOf="@+id/twoKey"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/twoKey"
+        style="@style/DialerKeyStyle"
+        android:text="2"
+        app:layout_constraintBottom_toBottomOf="@id/oneKey"
+        app:layout_constraintEnd_toStartOf="@+id/threeKey"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/oneKey" />
+
+    <TextView
+        android:id="@+id/threeKey"
+        style="@style/DialerKeyStyle"
+        android:text="3"
+        app:layout_constraintBottom_toBottomOf="@id/oneKey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/twoKey" />
+
+    <View
+        android:id="@+id/favouriteContacts"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/contactA"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:backgroundTint="#011f4b"
+        app:layout_constraintBottom_toTopOf="@+id/contactB"
+        app:layout_constraintStart_toStartOf="@id/favouriteContacts"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/starKey"
-            style="@style/DialerKeyStyle"
-            android:text="*"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/zeroKey"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent" />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/contactB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:backgroundTint="#03396c"
+        app:layout_constraintBottom_toTopOf="@+id/contactC"
+        app:layout_constraintStart_toStartOf="@id/contactA"
+        app:layout_constraintTop_toBottomOf="@+id/contactA" />
 
-        <TextView
-            android:id="@+id/zeroKey"
-            style="@style/DialerKeyStyle"
-            android:text="0"
-            app:layout_constraintBottom_toBottomOf="@id/starKey"
-            app:layout_constraintEnd_toStartOf="@+id/poundKey"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/starKey" />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/contactC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:backgroundTint="#005b96"
+        app:layout_constraintBottom_toTopOf="@+id/contactD"
+        app:layout_constraintStart_toStartOf="@id/contactA"
+        app:layout_constraintTop_toBottomOf="@+id/contactB" />
 
-        <TextView
-            android:id="@+id/poundKey"
-            style="@style/DialerKeyStyle"
-            android:text="#"
-            app:layout_constraintBottom_toBottomOf="@id/starKey"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/zeroKey" />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/contactD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:backgroundTint="#6497b1"
+        app:layout_constraintBottom_toTopOf="@+id/contactE"
+        app:layout_constraintStart_toStartOf="@id/contactA"
+        app:layout_constraintTop_toBottomOf="@+id/contactC" />
 
-        <TextView
-            android:id="@+id/sevenKey"
-            style="@style/DialerKeyStyle"
-            android:text="7"
-            app:layout_constraintBottom_toTopOf="@id/starKey"
-            app:layout_constraintEnd_toStartOf="@+id/eightKey"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <TextView
-            android:id="@+id/eightKey"
-            style="@style/DialerKeyStyle"
-            android:text="8"
-            app:layout_constraintBottom_toBottomOf="@id/sevenKey"
-            app:layout_constraintEnd_toStartOf="@+id/nineKey"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/sevenKey" />
-
-        <TextView
-            android:id="@+id/nineKey"
-            style="@style/DialerKeyStyle"
-            android:text="9"
-            app:layout_constraintBottom_toBottomOf="@id/sevenKey"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/eightKey" />
-
-        <TextView
-            android:id="@+id/fourKey"
-            style="@style/DialerKeyStyle"
-            android:text="4"
-            app:layout_constraintBottom_toTopOf="@id/sevenKey"
-            app:layout_constraintEnd_toStartOf="@+id/fiveKey"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <TextView
-            android:id="@+id/fiveKey"
-            style="@style/DialerKeyStyle"
-            android:text="5"
-            app:layout_constraintBottom_toBottomOf="@id/fourKey"
-            app:layout_constraintEnd_toStartOf="@+id/sixKey"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/fourKey" />
-
-        <TextView
-            android:id="@+id/sixKey"
-            style="@style/DialerKeyStyle"
-            android:text="6"
-            app:layout_constraintBottom_toBottomOf="@id/fourKey"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/fiveKey" />
-
-        <TextView
-            android:id="@+id/oneKey"
-            style="@style/DialerKeyStyle"
-            android:text="1"
-            app:layout_constraintBottom_toTopOf="@id/fourKey"
-            app:layout_constraintEnd_toStartOf="@+id/twoKey"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <TextView
-            android:id="@+id/twoKey"
-            style="@style/DialerKeyStyle"
-            android:text="2"
-            app:layout_constraintBottom_toBottomOf="@id/oneKey"
-            app:layout_constraintEnd_toStartOf="@+id/threeKey"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/oneKey" />
-
-        <TextView
-            android:id="@+id/threeKey"
-            style="@style/DialerKeyStyle"
-            android:text="3"
-            app:layout_constraintBottom_toBottomOf="@id/oneKey"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/twoKey" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/contactE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:backgroundTint="#b3cde0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/contactA"
+        app:layout_constraintTop_toBottomOf="@+id/contactD" />
 
 </androidx.constraintlayout.motion.widget.MotionLayout>
