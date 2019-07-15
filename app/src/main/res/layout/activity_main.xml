@@ -92,6 +92,15 @@
             android:text="Day to Night example with a ViewPager"
             android:textSize="16sp" />
 
+        <TextView
+            android:id="@+id/tvDialer"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/listPreferredItemHeightSmall"
+            android:gravity="center_vertical"
+            android:onClick="onClick"
+            android:text="Show Dialer"
+            android:textSize="16sp" />
+
     </LinearLayout>
 
 </ScrollView>

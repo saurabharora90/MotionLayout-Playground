@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/scene_dialer">
+
+    <View
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dialerPad"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/starKey"
+            style="@style/DialerKeyStyle"
+            android:text="*"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/zeroKey"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/zeroKey"
+            style="@style/DialerKeyStyle"
+            android:text="0"
+            app:layout_constraintBottom_toBottomOf="@id/starKey"
+            app:layout_constraintEnd_toStartOf="@+id/poundKey"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/starKey" />
+
+        <TextView
+            android:id="@+id/poundKey"
+            style="@style/DialerKeyStyle"
+            android:text="#"
+            app:layout_constraintBottom_toBottomOf="@id/starKey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/zeroKey" />
+
+        <TextView
+            android:id="@+id/sevenKey"
+            style="@style/DialerKeyStyle"
+            android:text="7"
+            app:layout_constraintBottom_toTopOf="@id/starKey"
+            app:layout_constraintEnd_toStartOf="@+id/eightKey"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/eightKey"
+            style="@style/DialerKeyStyle"
+            android:text="8"
+            app:layout_constraintBottom_toBottomOf="@id/sevenKey"
+            app:layout_constraintEnd_toStartOf="@+id/nineKey"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/sevenKey" />
+
+        <TextView
+            android:id="@+id/nineKey"
+            style="@style/DialerKeyStyle"
+            android:text="9"
+            app:layout_constraintBottom_toBottomOf="@id/sevenKey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/eightKey" />
+
+        <TextView
+            android:id="@+id/fourKey"
+            style="@style/DialerKeyStyle"
+            android:text="4"
+            app:layout_constraintBottom_toTopOf="@id/sevenKey"
+            app:layout_constraintEnd_toStartOf="@+id/fiveKey"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/fiveKey"
+            style="@style/DialerKeyStyle"
+            android:text="5"
+            app:layout_constraintBottom_toBottomOf="@id/fourKey"
+            app:layout_constraintEnd_toStartOf="@+id/sixKey"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/fourKey" />
+
+        <TextView
+            android:id="@+id/sixKey"
+            style="@style/DialerKeyStyle"
+            android:text="6"
+            app:layout_constraintBottom_toBottomOf="@id/fourKey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/fiveKey" />
+
+        <TextView
+            android:id="@+id/oneKey"
+            style="@style/DialerKeyStyle"
+            android:text="1"
+            app:layout_constraintBottom_toTopOf="@id/fourKey"
+            app:layout_constraintEnd_toStartOf="@+id/twoKey"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/twoKey"
+            style="@style/DialerKeyStyle"
+            android:text="2"
+            app:layout_constraintBottom_toBottomOf="@id/oneKey"
+            app:layout_constraintEnd_toStartOf="@+id/threeKey"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/oneKey" />
+
+        <TextView
+            android:id="@+id/threeKey"
+            style="@style/DialerKeyStyle"
+            android:text="3"
+            app:layout_constraintBottom_toBottomOf="@id/oneKey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/twoKey" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

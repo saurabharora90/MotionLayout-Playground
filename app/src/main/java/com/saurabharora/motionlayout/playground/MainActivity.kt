@@ -32,6 +32,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 startActivity(Intent(this, SunConstraintSetActivity::class.java))
             R.id.tvViewPager ->
                 startActivity(Intent(this, MotionViewPagerActivity::class.java))
+            R.id.tvDialer ->
+                startActivity(Intent(this, DialerActivity::class.java))
         }
     }
 }
