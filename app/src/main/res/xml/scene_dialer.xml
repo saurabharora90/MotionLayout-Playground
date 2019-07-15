@@ -2,42 +2,108 @@
 <MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:motion="http://schemas.android.com/apk/res-auto">
 
-    <ConstraintSet android:id="@+id/start">
+    <Transition
+        motion:constraintSetStart="@id/baseState"
+        motion:constraintSetEnd="@id/favourite"
+        motion:duration="500">
+
+        <OnSwipe
+            motion:dragDirection="dragRight"
+            motion:touchAnchorId="@id/favouriteContacts"
+            motion:touchAnchorSide="right" />
+
+    </Transition>
+
+    <Transition
+        motion:constraintSetStart="@id/baseState"
+        motion:constraintSetEnd="@id/dialer"
+        motion:duration="500">
+
+        <OnSwipe
+            motion:dragDirection="dragUp"
+            motion:touchAnchorId="@id/dialerPad"
+            motion:touchAnchorSide="top" />
+
+    </Transition>
+
+    <ConstraintSet android:id="@+id/baseState">
 
         <Constraint android:id="@id/dialerPad">
 
             <Layout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_height="330dp"
+                motion:layout_constraintEnd_toEndOf="parent"
+                motion:layout_constraintStart_toStartOf="parent"
                 motion:layout_constraintTop_toBottomOf="parent" />
 
         </Constraint>
 
-    </ConstraintSet>
-
-    <ConstraintSet android:id="@+id/end">
-
-        <Constraint android:id="@id/dialerPad">
+        <Constraint android:id="@+id/favouriteContacts">
 
             <Layout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                motion:layout_constraintBottom_toBottomOf="parent" />
+                android:layout_width="80dp"
+                android:layout_height="0dp"
+                motion:layout_constraintBottom_toBottomOf="parent"
+                motion:layout_constraintEnd_toStartOf="parent"
+                motion:layout_constraintTop_toTopOf="parent" />
 
         </Constraint>
 
     </ConstraintSet>
 
-    <Transition
-        motion:constraintSetEnd="@id/end"
-        motion:duration="500"
-        motion:constraintSetStart="@id/start">
+    <ConstraintSet android:id="@+id/dialer">
 
-        <OnSwipe
-            motion:touchAnchorId="@id/dialerPad"
-            motion:touchAnchorSide="bottom"
-            motion:dragDirection="dragUp"/>
+        <Constraint android:id="@id/dialerPad">
 
-    </Transition>
+            <Layout
+                android:layout_width="0dp"
+                android:layout_height="330dp"
+                motion:layout_constraintBottom_toBottomOf="parent"
+                motion:layout_constraintEnd_toEndOf="parent"
+                motion:layout_constraintStart_toStartOf="parent" />
+
+        </Constraint>
+
+        <Constraint android:id="@+id/favouriteContacts">
+
+            <Layout
+                android:layout_width="80dp"
+                android:layout_height="0dp"
+                motion:layout_constraintBottom_toBottomOf="parent"
+                motion:layout_constraintEnd_toStartOf="parent"
+                motion:layout_constraintTop_toTopOf="parent" />
+
+        </Constraint>
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/favourite">
+
+        <Constraint android:id="@id/dialerPad">
+
+            <Layout
+                android:layout_width="0dp"
+                android:layout_height="330dp"
+                motion:layout_constraintEnd_toEndOf="parent"
+                motion:layout_constraintStart_toStartOf="parent"
+                motion:layout_constraintTop_toBottomOf="parent" />
+
+        </Constraint>
+
+        <Constraint android:id="@+id/favouriteContacts">
+
+            <Layout
+                android:layout_width="80dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                motion:layout_constraintBottom_toBottomOf="parent"
+                motion:layout_constraintStart_toStartOf="parent"
+                motion:layout_constraintTop_toTopOf="parent" />
+
+        </Constraint>
+
+    </ConstraintSet>
 
 </MotionScene>
