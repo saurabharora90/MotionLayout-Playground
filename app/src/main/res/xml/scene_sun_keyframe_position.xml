@@ -3,21 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <Transition
+        android:id="@+id/toSunset"
         app:constraintSetEnd="@id/end"
         app:constraintSetStart="@id/start"
         app:duration="1000">
 
         <OnSwipe
             app:dragDirection="dragRight"
+            app:onTouchUp="autoComplete"
             app:touchAnchorId="@+id/ivSun"
-            app:touchAnchorSide="left" />
+            app:touchAnchorSide="left"
+            app:touchRegionId="@+id/ivSun" />
 
         <KeyFrameSet>
-
-            <KeyAttribute
-                android:alpha="0.7"
-                app:framePosition="0"
-                app:motionTarget="@id/sky" />
 
             <KeyPosition
                 app:framePosition="30"
@@ -42,11 +40,11 @@
             </KeyAttribute>
 
             <KeyCycle
-                app:waveShape="sin"
-                app:wavePeriod="1"
                 android:rotation="45"
                 app:framePosition="30"
-                app:motionTarget="@id/ivSun" />
+                app:motionTarget="@id/ivSun"
+                app:wavePeriod="1"
+                app:waveShape="sin" />
 
             <KeyAttribute
                 android:alpha="0"
@@ -72,6 +70,48 @@
 
     </Transition>
 
+    <Transition
+        android:id="@+id/toSunrise"
+        app:constraintSetEnd="@id/start"
+        app:constraintSetStart="@id/end">
+
+        <OnSwipe
+            app:dragDirection="dragDown"
+            app:onTouchUp="autoComplete"
+            app:touchAnchorId="@id/ivMoon"
+            app:touchAnchorSide="bottom"
+            app:touchRegionId="@id/ivMoon" />
+
+        <KeyFrameSet>
+
+            <KeyPosition
+                app:framePosition="0"
+                app:keyPositionType="pathRelative"
+                app:motionTarget="@id/ivSun"
+                app:percentX="0.9"
+                app:percentY="0.5" />
+
+            <KeyPosition
+                app:framePosition="60"
+                app:keyPositionType="pathRelative"
+                app:motionTarget="@id/ivSun"
+                app:percentX="0.9"
+                app:percentY="0.5" />
+
+            <KeyAttribute
+                android:alpha="0.2"
+                app:framePosition="60"
+                app:motionTarget="@id/sky" />
+
+            <KeyAttribute
+                android:alpha="0.8"
+                app:framePosition="60"
+                app:motionTarget="@id/nightSky" />
+
+        </KeyFrameSet>
+
+    </Transition>
+
     <ConstraintSet android:id="@+id/start">
 
 
@@ -80,6 +120,12 @@
             <CustomAttribute
                 app:attributeName="ColorFilter"
                 app:customColorValue="#eedca5" />
+
+        </Constraint>
+
+        <Constraint android:id="@+id/sky">
+
+            <PropertySet android:alpha="0.4" />
 
         </Constraint>
 
@@ -100,7 +146,7 @@
 
             <CustomAttribute
                 app:attributeName="ColorFilter"
-                app:customColorValue="#f0d084" />
+                app:customColorValue="#ef8e38" />
 
         </Constraint>
 
@@ -110,7 +156,7 @@
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 app:layout_constraintBottom_toTopOf="@id/ivHouse"
-                app:layout_constraintStart_toStartOf="parent"/>
+                app:layout_constraintStart_toStartOf="parent" />
 
             <PropertySet android:alpha="1" />
 
