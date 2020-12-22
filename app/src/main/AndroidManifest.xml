@@ -40,6 +40,8 @@
             android:name=".MotionViewPagerActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".DribbleProfileActivity"
+            android:exported="true"/>
     </application>
 
 </manifest>

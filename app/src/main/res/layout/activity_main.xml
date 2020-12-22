@@ -101,6 +101,15 @@
             android:text="Show Dialer"
             android:textSize="16sp" />
 
+        <TextView
+            android:id="@+id/tvCarousel"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/listPreferredItemHeightSmall"
+            android:gravity="center_vertical"
+            android:onClick="onClick"
+            android:text="Carousel Animations"
+            android:textSize="16sp" />
+
     </LinearLayout>
 
 </ScrollView>

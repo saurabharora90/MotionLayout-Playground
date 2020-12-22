@@ -34,6 +34,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 startActivity(Intent(this, MotionViewPagerActivity::class.java))
             R.id.tvDialer ->
                 startActivity(Intent(this, DialerActivity::class.java))
+            R.id.tvCarousel ->
+                startActivity(Intent(this, DribbleProfileActivity::class.java))
         }
     }
 }
