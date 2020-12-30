@@ -14,9 +14,9 @@
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         app:cardElevation="10dp"
-        app:layout_constraintTop_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent">
 
         <include layout="@layout/item_profile_dup" />
 
@@ -53,6 +53,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <!--The dup layout is the same as the non dup layout. It is just added here for rendering convience. To show the different colors of cards stacked up-->
         <include layout="@layout/item_profile_dup" />
 
     </com.google.android.material.card.MaterialCardView>
@@ -121,8 +122,8 @@
         app:carousel_backwardTransition="@+id/backward"
         app:carousel_firstView="@+id/card1"
         app:carousel_forwardTransition="@+id/forward"
-        app:carousel_nextState="@+id/next"
         app:carousel_infinite="true"
+        app:carousel_nextState="@+id/next"
         app:carousel_previousState="@+id/previous"
         app:constraint_referenced_ids="card0, card1, card2, card3, card4, card5" />
 
