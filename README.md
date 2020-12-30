@@ -4,6 +4,9 @@ A Playground repository to showcase UI's and transitions built using Motion Layo
 #### Card User Profile Carousel
 ![card_carousel.gif](gif/card_carousel.gif)
 
+#### Google Pay Style Card Selector
+![gpay.gif](gif/gpay.gif)
+
 #### Slide up to Reveal content
 ![slide_up_reveal_content.gif](gif/slide_up_reveal_content.gif)
 
