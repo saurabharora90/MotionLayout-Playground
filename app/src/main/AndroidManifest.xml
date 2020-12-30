@@ -11,7 +11,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-        <activity android:name=".GooglePayCardSelectorActivity"></activity>
+        <activity
+            android:name=".GooglePayCardSelectorActivity"
+            android:label="Google Pay Demo"
+            android:exported="true" />
         <activity
             android:name=".DialerActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />

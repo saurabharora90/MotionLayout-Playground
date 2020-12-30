@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        android:id="@+id/forward"
+        app:constraintSetEnd="@id/next"
+        app:constraintSetStart="@id/start">
+
+        <OnSwipe
+            app:dragDirection="dragLeft"
+            app:touchAnchorSide="middle" />
+
+        <KeyFrameSet>
+
+            <KeyAttribute
+                android:alpha="0"
+                app:framePosition="50"
+                app:motionTarget="@id/ivContactless" />
+
+            <KeyAttribute
+                android:alpha="0"
+                app:framePosition="50"
+                app:motionTarget="@id/tvMessage" />
+
+            <KeyAttribute
+                android:scaleX="0.85"
+                android:scaleY="0.85"
+                app:framePosition="5"
+                app:motionTarget="@id/card1" />
+
+            <KeyAttribute
+                android:scaleX="0.85"
+                android:scaleY="0.85"
+                app:framePosition="95"
+                app:motionTarget="@id/card2" />
+
+            <KeyPosition
+                app:framePosition="25"
+                app:motionTarget="@id/card0"
+                app:percentX="1" />
+        </KeyFrameSet>
+    </Transition>
+
+    <Transition
+        android:id="@+id/backward"
+        app:constraintSetEnd="@id/previous"
+        app:constraintSetStart="@id/start">
+
+        <OnSwipe
+            app:dragDirection="dragRight"
+            app:touchAnchorSide="middle" />
+
+        <KeyFrameSet>
+
+            <KeyAttribute
+                android:alpha="0"
+                app:framePosition="50"
+                app:motionTarget="@id/ivContactless" />
+
+            <KeyAttribute
+                android:alpha="0"
+                app:framePosition="50"
+                app:motionTarget="@id/tvMessage" />
+
+            <KeyAttribute
+                android:scaleX="0.85"
+                android:scaleY="0.85"
+                app:framePosition="5"
+                app:motionTarget="@id/card1" />
+
+            <KeyAttribute
+                android:scaleX="0.85"
+                android:scaleY="0.85"
+                app:framePosition="95"
+                app:motionTarget="@id/card0" />
+
+            <KeyPosition
+                app:framePosition="25"
+                app:motionTarget="@id/card2"
+                app:percentX="1" />
+        </KeyFrameSet>
+
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+
+        <Constraint
+            android:id="@+id/card0"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleX="0.85"
+            android:scaleY="0.85"
+            app:layout_constraintBottom_toBottomOf="@id/barrier"
+            app:layout_constraintDimensionRatio="16:9"
+            app:layout_constraintEnd_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toTopOf="@id/barrier" />
+
+        <Constraint
+            android:id="@+id/card1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="16:9"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/tvMessage" />
+
+        <Constraint
+            android:id="@+id/card2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleX="0.85"
+            android:scaleY="0.85"
+            app:layout_constraintBottom_toBottomOf="@id/barrier"
+            app:layout_constraintDimensionRatio="16:9"
+            app:layout_constraintStart_toEndOf="@id/guidelineEnd"
+            app:layout_constraintTop_toTopOf="@id/barrier" />
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/next">
+
+        <Constraint
+            android:id="@+id/card0"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleX="0.85"
+            android:scaleY="0.85"
+            app:layout_constraintBottom_toBottomOf="@id/barrier"
+            app:layout_constraintDimensionRatio="16:9"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/barrier" />
+
+        <Constraint
+            android:id="@+id/card1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleX="0.85"
+            android:scaleY="0.85"
+            app:layout_constraintBottom_toBottomOf="@id/barrier"
+            app:layout_constraintDimensionRatio="16:9"
+            app:layout_constraintEnd_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toTopOf="@id/barrier" />
+
+        <Constraint
+            android:id="@+id/card2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="16:9"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/tvMessage" />
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/previous">
+
+        <Constraint
+            android:id="@+id/card0"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="16:9"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/tvMessage" />
+
+        <Constraint
+            android:id="@+id/card1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleX="0.85"
+            android:scaleY="0.85"
+            app:layout_constraintBottom_toBottomOf="@id/barrier"
+            app:layout_constraintDimensionRatio="16:9"
+            app:layout_constraintStart_toEndOf="@id/guidelineEnd"
+            app:layout_constraintTop_toTopOf="@id/barrier" />
+
+        <Constraint
+            android:id="@+id/card2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleX="0.85"
+            android:scaleY="0.85"
+            app:layout_constraintBottom_toBottomOf="@id/barrier"
+            app:layout_constraintDimensionRatio="16:9"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/barrier" />
+
+    </ConstraintSet>
+
+</MotionScene>
